@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import CreateVehicleTransportRequestView, AllVehicleTransportRequestsView
+from .views import CreateVehicleTransportRequestView, MyVehicleTransportRequestsView
 
 urlpatterns = [
     path(
@@ -8,8 +8,8 @@ urlpatterns = [
         name="create-vehicle-request",
     ),
     path(
-        "all-vehicle-requests/",
-        AllVehicleTransportRequestsView.as_view(),
-        name="all-vehicle-requests",
+        "vehicle-requests/",
+        MyVehicleTransportRequestsView.as_view(),
+        name="vehicle-requests",
     ),
 ]
