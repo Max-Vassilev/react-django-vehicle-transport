@@ -6,7 +6,7 @@ function Login() {
     return (
         <>
             < Header />
-            < Form route="/api/user/login/" method="login" />
+            < Form route="/api/token/" method="login" />
             < Footer />
         </>
     )

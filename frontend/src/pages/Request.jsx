@@ -23,7 +23,7 @@ const Request = () => {
     e.preventDefault();
     console.log("Form data submitted:", formData);
 
-    const token = localStorage.getItem("jwt_token");
+    const token = localStorage.getItem("access");
 
     try {
       const response = await fetch(`http://127.0.0.1:8000/api/create-vehicle-request/`, {
