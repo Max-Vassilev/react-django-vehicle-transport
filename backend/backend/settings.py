@@ -95,9 +95,20 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
+DATABASE_URL = os.getenv("AZURE_POSTGRESQL_CONNECTIONSTRING")
+
+params = dict(p.split("=") for p in DATABASE_URL.split(" "))
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": params.get("dbname"),
+        "USER": params.get("user"),
+        "PASSWORD": params.get("password"),
+        "HOST": params.get("host"),
+        "PORT": params.get("port"),
+        "OPTIONS": {
+            "sslmode": params.get("sslmode"),
+        },
+    }
+}
