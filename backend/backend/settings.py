@@ -8,7 +8,13 @@ SECRET_KEY = "django-insecure-c0o4to^p56b^=5l#$w#^fc79%#s6f@vmwn=w(r(1n)j25mx1rl
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['vehicles-backend.azurewebsites.net']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://vehicles-backend.azurewebsites.net',
+    'https://your-frontend-domain.com'
+]
+
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
