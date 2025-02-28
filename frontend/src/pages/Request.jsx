@@ -6,22 +6,19 @@ import Footer from "../components/Footer";
 const Request = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    phone: "",
     pickup_country: "",
     pickup_city: "",
     delivery_country: "",
     delivery_city: "",
     small_car_count: 0,
     big_car_count: 0,
-    suv_count: 0,
-    bus_count: 0
+    suv_count: 0
   });
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form data submitted:", formData);
 
     const token = localStorage.getItem("access");
 
@@ -51,9 +48,8 @@ const Request = () => {
       <Header />
       <main className="flex-grow py-12 flex flex-col items-center">
         <h1 className="text-white text-3xl">Request Transport</h1>
-        <form onSubmit={handleSubmit} className="mt-8 bg-gray-900 p-6 rounded-lg w-full max-w-lg">
+        <form onSubmit={handleSubmit} className="mt-8 bg-gray-900 p-6 rounded-lg w-full max-w-4xl sm:max-w-md">
           {[
-            { label: "Phone", name: "phone" },
             { label: "Pickup Country", name: "pickup_country" },
             { label: "Pickup City", name: "pickup_city" },
             { label: "Delivery Country", name: "delivery_country" },
@@ -67,8 +63,7 @@ const Request = () => {
           {[
             { label: "Small Car Count", name: "small_car_count" },
             { label: "Big Car Count", name: "big_car_count" },
-            { label: "SUV Count", name: "suv_count" },
-            { label: "Bus Count", name: "bus_count" }
+            { label: "SUV Count", name: "suv_count" }
           ].map(({ label, name }) => (
             <div key={name} className="mb-4">
               <label className="block text-white">{label}:</label>
