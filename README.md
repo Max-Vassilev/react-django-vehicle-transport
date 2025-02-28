@@ -22,7 +22,7 @@
 ![My Requests](https://github.com/user-attachments/assets/f3ba7f94-46a5-4a29-a0e1-12ef467f8bef)
 
 ### All requests are managed from the Django admin panel:
-![Django Admin Panel](https://github.com/user-attachments/assets/bd7dd5f3-2a86-4991-baca-5f1a6956327c)
+![image](https://github.com/user-attachments/assets/1280176b-1b4e-4738-bd54-defb5fc34a68)
 
 ### Other Pages:
 ![Other Pages 1](https://github.com/user-attachments/assets/43015517-4b06-477b-9055-ee988a194b10)
