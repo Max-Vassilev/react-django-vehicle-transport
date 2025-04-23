@@ -1,6 +1,3 @@
-https://lemon-rock-0d547de03.6.azurestaticapps.net/
-
-
 ### Home Page:
 ![Home Page](https://github.com/user-attachments/assets/c80e821f-bde8-4e88-ac55-58374b13a259)
 
