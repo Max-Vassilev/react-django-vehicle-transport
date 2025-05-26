@@ -1,8 +1,8 @@
 ### Home Page:
-![Home Page](https://github.com/user-attachments/assets/c80e821f-bde8-4e88-ac55-58374b13a259)
+![image](https://github.com/user-attachments/assets/864f4672-7d53-4154-bb8a-83b970f0cf47)
 
 ### Main Functionality: Vehicle Transportation Request (available only for authenticated users):
-![Vehicle Transport Request](https://github.com/user-attachments/assets/1020f060-e2ab-44d6-bafd-1c0e8bf1d874)
+![image](https://github.com/user-attachments/assets/7d13e35f-5e1a-4747-af38-dbc5862c548a)
 
 ### Login:
 ![Login](https://github.com/user-attachments/assets/0328ad81-2626-49f8-81f6-862d1ef4495a)
