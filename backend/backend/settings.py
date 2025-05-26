@@ -4,17 +4,16 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY", "your-default-secret-key")
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['vehicles-backend.azurewebsites.net']
+ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://vehicles-backend.azurewebsites.net',
-    'https://your-frontend-domain.com'
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
 ]
-
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
@@ -75,6 +74,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "backend.wsgi.application"
 
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
@@ -100,21 +106,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
-
-DATABASE_URL = os.getenv("AZURE_POSTGRESQL_CONNECTIONSTRING")
-
-params = dict(p.split("=") for p in DATABASE_URL.split(" "))
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": params.get("dbname"),
-        "USER": params.get("user"),
-        "PASSWORD": params.get("password"),
-        "HOST": params.get("host"),
-        "PORT": params.get("port"),
-        "OPTIONS": {
-            "sslmode": params.get("sslmode"),
-        },
-    }
-}

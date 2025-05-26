@@ -12,7 +12,7 @@ const MyRequests = () => {
     const token = localStorage.getItem("access");
 
     try {
-      const response = await fetch(`https://vehicles-backend.azurewebsites.net/api/vehicle-requests/`, {
+      const response = await fetch(`http://127.0.0.1:8000/api/vehicle-requests/`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
