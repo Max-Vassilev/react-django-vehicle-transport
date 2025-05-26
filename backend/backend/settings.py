@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "backend.api",
+    "api",
     "rest_framework",
     "corsheaders",
 ]
@@ -74,10 +74,10 @@ WSGI_APPLICATION = "backend.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "postgrespassword",
-        "HOST": "db",
+        "NAME": "vehicle_transport",
+        "USER": "user",
+        "PASSWORD": "password",
+        "HOST": "database",
         "PORT": "5432",
     }
 }
