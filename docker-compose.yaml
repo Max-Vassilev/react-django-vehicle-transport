@@ -1,41 +1,35 @@
 version: '3.9'
 
 services:
-  backend:
-    container_name: backend_container
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    image: backend_image
-    ports:
-      - "8000:8000"
-    command: >
-      sh -c "python manage.py migrate &&
-             python manage.py runserver 0.0.0.0:8000"
-    depends_on:
-      database:
-        condition: service_healthy
-
-  frontend:
-    container_name: frontend_container
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    image: frontend_image
-    ports:
-      - "5173:5173"
-
   database:
-    container_name: database_container
     image: postgres:15
+    container_name: database_container
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
       POSTGRES_DB: vehicle_transport
     ports:
       - "5432:5432"
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U user"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+    container_name: backend_container
+    depends_on:
+      - database
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend_container
+    ports:
+      - "5173:5173"
+
+volumes:
+  pgdata:
