@@ -14,7 +14,7 @@
 ![image](https://github.com/user-attachments/assets/3532ed37-7375-4eca-b8e9-814fb038421f)
 
 ### After submitting a request, the user is redirected to the home page, where a banner appears:
-![Submission Confirmation](https://github.com/user-attachments/assets/f775574d-e0e7-475b-8e7b-28088f5b5199)
+![image](https://github.com/user-attachments/assets/59371390-fabf-40fe-bfcc-e172d3f5576d)
 
 ### Authenticated users have access to the "My Requests" page:
 ![My Requests](https://github.com/user-attachments/assets/f3ba7f94-46a5-4a29-a0e1-12ef467f8bef)
