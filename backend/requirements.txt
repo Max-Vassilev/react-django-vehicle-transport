@@ -1,11 +1,8 @@
-asgiref
 Django
-django-cors-headers
 djangorestframework
 djangorestframework-simplejwt
-PyJWT
-pytz
+django-cors-headers
 sqlparse
 psycopg2-binary
 python-dotenv
-whitenoise
+asgiref
