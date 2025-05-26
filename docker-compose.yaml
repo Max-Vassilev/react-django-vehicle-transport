@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: backend_container
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: backend_image
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - database
+
+  frontend:
+    container_name: frontend_container
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: frontend_image
+    ports:
+      - "5173:5173"
+
+  database:
+    container_name: database_container
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: vehicle_transport
+    ports:
+      - "5432:5432"
