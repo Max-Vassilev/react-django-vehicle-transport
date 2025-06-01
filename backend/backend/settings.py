@@ -74,7 +74,7 @@ WSGI_APPLICATION = "backend.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "vehicle_transport",
+        "NAME": "vehicle_transport_db",
         "USER": "user",
         "PASSWORD": "password",
         "HOST": "database",
