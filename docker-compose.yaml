@@ -29,10 +29,11 @@ services:
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: vehicle_transport_db
+      POSTGRES_DB: vehicle_transport
     ports:
       - "5432:5432"
     healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user"]
       interval: 10s
       timeout: 5s
       retries: 5
