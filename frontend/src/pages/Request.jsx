@@ -23,7 +23,7 @@ const Request = () => {
     const token = localStorage.getItem("access");
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/create-vehicle-request/`, {
+      const response = await fetch(`http://23.22.149.131:8000/api/create-vehicle-request/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
