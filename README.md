@@ -1,3 +1,20 @@
+### 🌐 Website  
+**http://23.22.149.131:5173**
+
+---
+
+### 📦 Deployment  
+This project runs on an AWS EC2 instance that clones the GitHub repository.  
+At the root of the repo is a Docker Compose file.  
+The Docker Compose builds the backend and frontend images from their folders, and pulls PostgreSQL from Docker Hub.  
+
+---
+
+### 🔐 Future  
+Use TLS certificate to provide HTTPS connection.
+
+
+
 ### Home Page:
 ![image](https://github.com/user-attachments/assets/864f4672-7d53-4154-bb8a-83b970f0cf47)
 
