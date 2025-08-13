@@ -7,6 +7,6 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
-    allowedHosts: 'all'
+    allowedHosts: ['vehicle-transport-alb-1148766537.us-east-1.elb.amazonaws.com']
   }
 })
