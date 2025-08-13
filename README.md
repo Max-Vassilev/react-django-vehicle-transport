@@ -11,7 +11,7 @@ Additionally, the EC2 instance’s inbound rules were updated to allow traffic o
 
 Future Structure:
 
-<img width="1730" height="400" alt="image" src="https://github.com/user-attachments/assets/34c4902b-667a-4e6c-8937-5d9661b09251" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/34c4902b-667a-4e6c-8937-5d9661b09251" />
 
 ---
 
