@@ -9,6 +9,10 @@ At the root of the repo is a Docker Compose file.
 Docker Compose builds the backend and frontend images from their respective folders and pulls PostgreSQL from Docker Hub.
 Additionally, the EC2 instance’s inbound rules were updated to allow traffic on ports 8000 and 5173 to enable proper communication with the backend and frontend services.
 
+Future Structure:
+
+<img width="1730" height="400" alt="image" src="https://github.com/user-attachments/assets/34c4902b-667a-4e6c-8937-5d9661b09251" />
+
 ---
 
 ### 🔐 Future Improvements:
